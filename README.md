@@ -1,5 +1,4 @@
 # Quiztopia
-# Quiztopia
 
 Quiztopia is a full-stack web application that allows users to create quizzes with geolocation-based questions. Users can mark specific locations on a map, associate questions and answers with these locations, and later view these quizzes on the map.
 
