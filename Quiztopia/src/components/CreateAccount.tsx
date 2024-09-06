@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { TextField, Button, Typography, Paper } from '@mui/material';
 import './CreateAccount.css';
 
+// Define the shape of the user data
 type User = {
     username: string;
     password: string;
@@ -10,16 +11,21 @@ type User = {
     lastname: string;
 };
 
+// Define the CreateAccount functional component
 export default function CreateAccount() {
+    // State variables for user input
     const [username, setUsername] = useState<string>('');
     const [password, setPassword] = useState<string>('');
     const [firstname, setFirstname] = useState<string>('');
     const [lastname, setLastname] = useState<string>('');
+    // State variable to manage slide-in animation
     const [slideIn, setSlideIn] = useState<boolean>(false);
+    // Hook to programmatically navigate to different routes
     const navigate = useNavigate();
 
+     // useEffect hook to trigger slide-in animation on component mount
     useEffect(() => {
-        setSlideIn(true); // Trigger slide-in animation when component mounts
+        setSlideIn(true); 
     }, []);
 
     const handleSubmit = async (event: React.FormEvent) => {
