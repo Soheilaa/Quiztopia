@@ -1,0 +1,40 @@
+/* Apply global styles for full viewport coverage */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Ensures full width of the page */
+#root {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure flex container covers the full viewport */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Centering the h1 element */
+h1 {
+  text-align: center; /* Center text horizontally */
+  margin: 0;
+  padding: 20px; /* Optional padding */
+  font-size: 2rem; /* Adjust font size as needed */
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+  h1 {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+  .App {
+    min-height: auto;
+  }
+}
