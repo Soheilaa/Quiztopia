@@ -1,0 +1,69 @@
+/* LandingPage.css */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.landing-container {
+    background-image: url('../assets/backgroundIIII.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.landing-container h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 7rem;
+    color: #ffffff;
+}
+
+button {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#button-container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Slide effect for the login form */
+.login-slide {
+    position: fixed;
+    top: 0;
+    right: -50%;
+    width: 50%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+    transition: right 1s ease-in-out; /* Smooth transition */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Make the login form visible and slide in */
+.login-slide.visible {
+    right: 0; /* Slide in from the right */
+}
+
+.landing-container.transitioning h1,
+.landing-container.transitioning #button-container {
+    opacity: 0;
+}
